@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>~*~My Awesome Homepage~*~</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/geocities-theme.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- Sparkle container for cursor effect -->
+    <div id="sparkle-container"></div>
+
+    <!-- Main App Container -->
+    <div id="app">
+        <!-- Header with animated title -->
+        <header id="header">
+            <div class="header-stars">★ ★ ★ ★ ★</div>
+            <h1 class="site-title rainbow-text">~*~My Awesome Homepage~*~</h1>
+            <p class="site-tagline blink">Welcome 2 my corner of the web!!!</p>
+            <div class="header-stars">★ ★ ★ ★ ★</div>
+        </header>
+
+        <!-- Marquee Banner -->
+        <div class="marquee-container">
+            <div class="marquee-content">
+                ★彡 Welcome to my page! ★彡 Sign my guestbook! ★彡 This site is always under construction! ★彡 Best viewed in 800x600! ★彡 You are visitor #<span id="marquee-hits">0000</span>! ★彡
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav id="navigation">
+            <a href="#home" class="nav-btn">
+                <span class="btn-icon">🏠</span> Home
+            </a>
+            <a href="#posts" class="nav-btn">
+                <span class="btn-icon">📝</span> Posts
+            </a>
+            <a href="#new" class="nav-btn">
+                <span class="btn-icon">✏️</span> New Post
+            </a>
+            <a href="#guestbook" class="nav-btn">
+                <span class="btn-icon">📖</span> Guestbook
+            </a>
+        </nav>
+
+        <!-- Main Content Area -->
+        <div class="content-wrapper">
+            <!-- Sidebar -->
+            <aside id="sidebar">
+                <div class="sidebar-box">
+                    <h3 class="sidebar-title bounce">About Me</h3>
+                    <div class="about-avatar">
+                        <div class="avatar-placeholder spin-slow">☆</div>
+                    </div>
+                    <p class="about-text">
+                        Hey!!! Im just a cool person who loves the internet and making web pages! Feel free 2 look around ^_^
+                    </p>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3 class="sidebar-title">Hit Counter</h3>
+                    <div class="hit-counter" id="hit-counter">
+                        <span class="counter-digit">0</span>
+                        <span class="counter-digit">0</span>
+                        <span class="counter-digit">0</span>
+                        <span class="counter-digit">0</span>
+                        <span class="counter-digit">0</span>
+                    </div>
+                    <p class="visitor-text">visitors since 1999!</p>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3 class="sidebar-title">Site Status</h3>
+                    <div class="under-construction">
+                        <span class="construction-icon">🚧</span>
+                        <span class="blink">UNDER CONSTRUCTION</span>
+                        <span class="construction-icon">🚧</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3 class="sidebar-title">Cool Badges</h3>
+                    <div class="badges">
+                        <div class="badge">Best Viewed in Netscape</div>
+                        <div class="badge">Made with Notepad</div>
+                        <div class="badge">JavaScript Powered!</div>
+                        <div class="badge">Y2K Ready!</div>
+                    </div>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3 class="sidebar-title">WebRings</h3>
+                    <div class="webring">
+                        <span class="webring-arrow">&lt;&lt;</span>
+                        <span class="webring-name">Cool Sites Ring</span>
+                        <span class="webring-arrow">&gt;&gt;</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main id="content">
+                <!-- Content will be dynamically loaded here -->
+                <div class="loading">
+                    <span class="spin">★</span> Loading... <span class="spin">★</span>
+                </div>
+            </main>
+        </div>
+
+        <!-- Rainbow Divider -->
+        <hr class="rainbow-hr">
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="footer-text">
+                <span class="sparkle">✧</span>
+                Copyright &copy; 1999 - All Rights Reserved
+                <span class="sparkle">✧</span>
+            </p>
+            <p class="footer-email">
+                Email me: <a href="mailto:webmaster@geocities.com" class="email-link">webmaster@geocities.com</a>
+            </p>
+            <p class="footer-made">
+                Made with <span class="heart pulse">♥</span> and way too much <span class="rainbow-text">HTML</span>
+            </p>
+            <div class="footer-stars">★ ☆ ★ ☆ ★ ☆ ★ ☆ ★</div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/post-manager.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,410 @@
+/**
+ * Animations CSS - Over-the-top 90s Effects
+ */
+
+/* ==================== */
+/* KEYFRAME DEFINITIONS */
+/* ==================== */
+
+/* Blink - Classic 90s blink effect */
+@keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+/* Rainbow Text - Cycling through colors */
+@keyframes rainbow {
+    0% { color: #FF0000; }
+    14% { color: #FF8800; }
+    28% { color: #FFFF00; }
+    42% { color: #00FF00; }
+    57% { color: #00FFFF; }
+    71% { color: #0000FF; }
+    85% { color: #FF00FF; }
+    100% { color: #FF0000; }
+}
+
+/* Bounce - Vertical bouncing */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Spin - Full rotation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Spin Slow - Gentle rotation */
+@keyframes spin-slow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Pulse - Scale effect */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+/* Shake - Horizontal wobble */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Float - Gentle up-down */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Glow - Pulsing glow effect */
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 5px currentColor, 0 0 10px currentColor;
+    }
+    50% {
+        text-shadow: 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor;
+    }
+}
+
+/* Glitter - Sparkle opacity */
+@keyframes glitter {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Color Shift - Background color transition */
+@keyframes color-shift {
+    0% { background-color: #FF1493; }
+    25% { background-color: #9400D3; }
+    50% { background-color: #00FFFF; }
+    75% { background-color: #32CD32; }
+    100% { background-color: #FF1493; }
+}
+
+/* Sparkle Fade - For cursor sparkles */
+@keyframes sparkle-fade {
+    0% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0) rotate(180deg);
+    }
+}
+
+/* Star Fall - Falling star animation */
+@keyframes star-fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Wiggle - Fun wiggle effect */
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+}
+
+/* Zoom In Out */
+@keyframes zoom {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* ==================== */
+/* ANIMATION CLASSES    */
+/* ==================== */
+
+/* Blink */
+.blink {
+    animation: blink 1s step-end infinite;
+}
+
+.blink-slow {
+    animation: blink 2s step-end infinite;
+}
+
+/* Rainbow Text */
+.rainbow-text {
+    animation: rainbow 3s linear infinite;
+}
+
+/* Bounce */
+.bounce {
+    animation: bounce 0.6s ease-in-out infinite;
+}
+
+.bounce-slow {
+    animation: bounce 1s ease-in-out infinite;
+}
+
+/* Spin */
+.spin {
+    display: inline-block;
+    animation: spin 1s linear infinite;
+}
+
+.spin-slow {
+    display: inline-block;
+    animation: spin-slow 4s linear infinite;
+}
+
+/* Pulse */
+.pulse {
+    display: inline-block;
+    animation: pulse 0.8s ease-in-out infinite;
+}
+
+/* Shake */
+.shake {
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+/* Float */
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Glow */
+.glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+/* Glitter */
+.glitter {
+    animation: glitter 0.3s ease-in-out infinite;
+}
+
+/* Wiggle */
+.wiggle {
+    animation: wiggle 0.3s ease-in-out infinite;
+}
+
+/* Zoom */
+.zoom {
+    animation: zoom 2s ease-in-out infinite;
+}
+
+/* ==================== */
+/* HOVER ANIMATIONS     */
+/* ==================== */
+
+/* Hover Bounce */
+.hover-bounce:hover {
+    animation: bounce 0.3s ease-in-out;
+}
+
+/* Hover Shake */
+.hover-shake:hover {
+    animation: shake 0.3s ease-in-out;
+}
+
+/* Hover Spin */
+.hover-spin:hover {
+    animation: spin 0.5s linear;
+}
+
+/* Hover Glow */
+.hover-glow:hover {
+    animation: glow 0.5s ease-in-out infinite;
+}
+
+/* ==================== */
+/* SPARKLE ELEMENTS     */
+/* ==================== */
+
+.sparkle-element {
+    position: fixed;
+    pointer-events: none;
+    font-size: 20px;
+    z-index: 10000;
+    animation: sparkle-fade 1s ease-out forwards;
+}
+
+/* Falling Star */
+.falling-star {
+    position: fixed;
+    color: #FFFF00;
+    font-size: 16px;
+    pointer-events: none;
+    z-index: 9998;
+    animation: star-fall 3s linear forwards;
+    text-shadow: 0 0 10px #FFFF00, 0 0 20px #FF8800;
+}
+
+/* ==================== */
+/* SPECIAL TEXT EFFECTS */
+/* ==================== */
+
+/* Animated Gradient Text */
+.gradient-text {
+    background: linear-gradient(
+        90deg,
+        #FF0000, #FF8800, #FFFF00,
+        #00FF00, #00FFFF, #0000FF,
+        #FF00FF, #FF0000
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 3s linear infinite;
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+/* Neon Text */
+.neon-text {
+    color: #fff;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #FF1493,
+        0 0 30px #FF1493,
+        0 0 40px #FF1493;
+    animation: neon-flicker 1.5s infinite alternate;
+}
+
+@keyframes neon-flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow:
+            0 0 5px #fff,
+            0 0 10px #fff,
+            0 0 20px #FF1493,
+            0 0 30px #FF1493,
+            0 0 40px #FF1493;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+/* ==================== */
+/* BUTTON EFFECTS       */
+/* ==================== */
+
+/* 3D Button Press Effect */
+.btn-3d {
+    transition: all 0.1s;
+}
+
+.btn-3d:active {
+    transform: translateY(2px);
+    box-shadow: none !important;
+}
+
+/* Rainbow Border Animation */
+.rainbow-border {
+    position: relative;
+}
+
+.rainbow-border::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: linear-gradient(
+        90deg,
+        #FF0000, #FF8800, #FFFF00,
+        #00FF00, #00FFFF, #0000FF,
+        #FF00FF, #FF0000
+    );
+    background-size: 400% 400%;
+    z-index: -1;
+    animation: border-rainbow 3s linear infinite;
+}
+
+@keyframes border-rainbow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 400% 50%; }
+}
+
+/* ==================== */
+/* LOADING ANIMATIONS   */
+/* ==================== */
+
+.loading-dots::after {
+    content: '';
+    animation: loading-dots 1.5s infinite;
+}
+
+@keyframes loading-dots {
+    0% { content: ''; }
+    25% { content: '.'; }
+    50% { content: '..'; }
+    75% { content: '...'; }
+}
+
+/* ==================== */
+/* TRANSITION CLASSES   */
+/* ==================== */
+
+.fade-in {
+    animation: fade-in 0.5s ease-out;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.slide-in-left {
+    animation: slide-in-left 0.5s ease-out;
+}
+
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation: slide-in-right 0.5s ease-out;
+}
+
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.pop-in {
+    animation: pop-in 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes pop-in {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
